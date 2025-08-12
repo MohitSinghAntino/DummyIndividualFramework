@@ -16,4 +16,9 @@ public class SampleViewController: UIViewController {
         
     }
     
+    @IBAction func printAction(_ sender: Any) {
+        
+        print("calculating things")
+        
+    }
 }
