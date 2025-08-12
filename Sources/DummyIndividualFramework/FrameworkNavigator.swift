@@ -9,9 +9,7 @@ import UIKit
 
 public class FrameworkNavigator {
     
-    public static func makeSampleViewController() -> UIViewController {
-        var viewController: UIViewController!
-        
+    public static func makeSampleViewController(from viewController: UIViewController) {
         DispatchQueue.main.async {
             #if SWIFT_PACKAGE
             let bundle = Bundle.module
@@ -20,10 +18,10 @@ public class FrameworkNavigator {
             #endif
             
             let storyboard = UIStoryboard(name: "SampleViewController", bundle: bundle)
-            viewController = storyboard.instantiateViewController(withIdentifier: "SampleViewController")
+            let sampleVC = storyboard.instantiateViewController(withIdentifier: "SampleViewController")
+            
+            viewController.navigationController?.pushViewController(sampleVC, animated: true)
         }
-        
-        return viewController
     }
     
     public static func pop(from navigationController: UINavigationController?, animated: Bool = true) {
