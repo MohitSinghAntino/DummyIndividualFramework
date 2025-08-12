@@ -12,7 +12,7 @@ public class FrameworkNavigator {
     public static func makeSampleViewController() -> UIViewController {
         var viewController: UIViewController!
         
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             #if SWIFT_PACKAGE
             let bundle = Bundle.module
             #else
