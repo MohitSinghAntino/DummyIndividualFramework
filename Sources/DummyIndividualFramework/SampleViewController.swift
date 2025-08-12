@@ -10,6 +10,10 @@ import UIKit
 
 public class SampleViewController: UIViewController {
 
+    @IBOutlet weak var btn: UIButton!
     
+    public override func viewDidLoad() {
+        
+    }
     
 }
