@@ -9,18 +9,27 @@ import UIKit
 
 public class FrameworkNavigator {
     
-    @MainActor public static func makeSampleViewController() -> UIViewController {
-        #if SWIFT_PACKAGE
-        let bundle = Bundle.module
-        #else
-        let bundle = Bundle(for: SampleViewController.self)
-        #endif
+    public static func makeSampleViewController() -> UIViewController {
+        var viewController: UIViewController!
         
-        let storyboard = UIStoryboard(name: "SampleViewController", bundle: bundle)
-        return storyboard.instantiateViewController(withIdentifier: "SampleViewController")
+        DispatchQueue.main.sync {
+            #if SWIFT_PACKAGE
+            let bundle = Bundle.module
+            #else
+            let bundle = Bundle(for: SampleViewController.self)
+            #endif
+            
+            let storyboard = UIStoryboard(name: "SampleViewController", bundle: bundle)
+            viewController = storyboard.instantiateViewController(withIdentifier: "SampleViewController")
+        }
+        
+        return viewController
     }
     
-    @MainActor public static func pop(from navigationController: UINavigationController?, animated: Bool = true) {
-        navigationController?.popViewController(animated: animated)
+    public static func pop(from navigationController: UINavigationController?, animated: Bool = true) {
+        DispatchQueue.main.async {
+            navigationController?.popViewController(animated: animated)
+        }
     }
 }
+
