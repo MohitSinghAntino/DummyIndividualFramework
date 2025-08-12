@@ -18,9 +18,14 @@ public class FrameworkNavigator {
             #endif
             
             let storyboard = UIStoryboard(name: "SampleViewController", bundle: bundle)
-            let sampleVC = storyboard.instantiateViewController(withIdentifier: "SampleViewController")
+//            let sampleVC = storyboard.instantiateViewController(withIdentifier: "SampleViewController")
             
-            viewController.navigationController?.pushViewController(sampleVC, animated: true)
+            if let sampleVC = storyboard.instantiateViewController(withIdentifier: "SampleViewController") as? SampleViewController {
+                viewController.navigationController?.pushViewController(sampleVC, animated: true)
+            }
+
+            
+            //viewController.navigationController?.pushViewController(sampleVC, animated: true)
         }
     }
     
