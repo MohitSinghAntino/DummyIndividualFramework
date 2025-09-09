@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,12 +25,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tqh-dg-J1B">
+                    <rect key="frame" x="148" y="233" width="97" height="33.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="kYk-m6-MVG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4WF-qv-mlk"/>
+                <constraint firstItem="kYk-m6-MVG" firstAttribute="top" secondItem="tqh-dg-J1B" secondAttribute="bottom" constant="148.66999999999999" id="GHq-kA-ufs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tqh-dg-J1B" secondAttribute="trailing" constant="148" id="I3D-yd-qTT"/>
                 <constraint firstItem="kYk-m6-MVG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PEu-3F-d7Y"/>
+                <constraint firstItem="tqh-dg-J1B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="148" id="Yo2-Er-N9t"/>
+                <constraint firstItem="tqh-dg-J1B" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="115" id="mcp-ka-Eot"/>
             </constraints>
             <point key="canvasLocation" x="66" y="21"/>
         </view>
