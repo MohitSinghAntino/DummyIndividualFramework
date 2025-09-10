@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DummyView" customModule="DummySDK" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DummyView" customModuleProvider="target">
             <connections>
                 <outlet property="titleLbl" destination="kYk-m6-MVG" id="gqT-6M-GAN"/>
             </connections>
